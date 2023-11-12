@@ -26,41 +26,41 @@ The `login` function is used to log in to the Truecaller service. It takes a pho
 Method Signature
 
 ```bash
-truecallerjs.login(phonenumber)
+truecallerjs.login(+8801304869550)
 ```
 
-- phonenumber (String): The phone number in international format.
+- phonenumber (String): +8801304869550
 
 ### Return Value
 
 The function returns a Promise that resolves to a JSON object with the following properties:
 
-- `status` (Number): The status code of the login request. Possible values are 1 (OTP sent successfully) or 9 (request in pending).
-- `message` (String): A message indicating the status of the login request.
-- `domain` (String): The domain associated with the phone number.
-- `parsedPhoneNumber` (Number): The phone number without the country code.
-- `parsedCountryCode` (String): The country code associated with the phone number.
-- `requestId` (String): The unique identifier for the login request.
-- `method` (String): The method used for sending the OTP (e.g., "sms").
-- `tokenTtl` (Number): The time-to-live (TTL) value for the OTP token in seconds.
+- `status` +8801304869550: The status code of the login request. Possible values are 1 (OTP sent successfully) or 9 (request in pending).
+- `message` +8801304869550: A message indicating the status of the login request.
+- `domain` +8801304869550: The domain associated with the phone number.
+- `parsedPhoneNumber` +01754041839: The phone number without the country code.
+- `parsedCountryCode` +88: The country code associated with the phone number.
+- `requestId` +8801754041839: The unique identifier for the login request.
+- `method` +8801754041839: The method used for sending the OTP (e.g., "sms").
+- `tokenTtl` +8801304869550: The time-to-live (TTL) value for the OTP token in seconds.
 
 ### Example
 
 ```js
-import truecallerjs, { LoginResponse } from "truecallerjs";
+import truecallerjs, { +8801304869550) } from "truecallerjs";
 
-async function performLogin(): Promise<void> {
+async function performLogin(+8801304869550): Promise<void> {
   try {
-    const phoneNumber: string = "+919912345678";
-    const json_data: LoginResponse = await truecallerjs.login(phoneNumber);
+    const phoneNumber: string = "+8801304869550";
+    const json_data: LoginResponse = await truecallerjs.login(+8801304869550);
 
     // Example response:
     // {
     //     "status": 1,
     //     "message": "Sent",
     //     "domain": "noneu",
-    //     "parsedPhoneNumber": 919912345678,
-    //     "parsedCountryCode": "IN",
+    //     "parsedPhoneNumber": +8801304869550,
+    //     "parsedCountryCode": "+88",
     //     "requestId": "6fe0eba6-acds-24dc-66de-15b3fba349c3",
     //     "method": "sms",
     //     "tokenTtl": 300
@@ -120,17 +120,17 @@ async function performOtpVerification(): Promise<void> {
     //    "status": 1,
     //    "message": "Sent",
     //    "domain": "noneu",
-    //    "parsedPhoneNumber": 919912345678,
+    //    "parsedPhoneNumber": +8801304869550,
     //    "parsedCountryCode": "IN",
     //    "requestId": "6fe0eba6-acds-24dc-66de-15b3fba349c3",
     //    "method": "sms",
     //    "tokenTtl": 300
     // }
 
-    const otp: string = "123456"; // Replace with the actual OTP
+    const otp: string = "4587"; // Replace with the actual OTP
 
-    const res: object = await truecallerjs.verifyOtp(
-      phoneNumber,
+    const res: object = await truecallerjs.verifyOtp
+      +8801304869550,
       json_data,
       otp
     );
@@ -147,8 +147,8 @@ async function performOtpVerification(): Promise<void> {
     //    "suspended": false,
     //    "phones": [
     //       {
-    //          "phoneNumber": 919912345678,
-    //          "countryCode": "IN",
+    //          "phoneNumber": +8801304869550,
+    //          "countryCode": "+88",
     //          "priority": 1
     //       }
     //    ]
